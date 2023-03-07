@@ -13,7 +13,7 @@ public static class FileParserFactory
             case "json":
                 return new JsonFileParser { FilePath = fileName };
             case "xml":
-                return new JsonFileParser { FilePath = fileName };
+                return new XmlFileParser { FilePath = fileName };
             default:
                 throw new ArgumentException($"Invalid File Parser type: {fileType}");
         }
