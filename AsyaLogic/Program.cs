@@ -16,7 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 
-builder.Services.AddDbContext<AsyaLogicContext>(opts => opts.UseSqlServer(builder.Configuration["sqlconnection:connectionString"]));
+builder.Services.AddDbContext<AsyaLogicContext>(opts => opts.UseSqlServer(builder.Configuration["ConnectionStrings:SqlConnection"]));
 builder.Services.AddTransient<IFileUploadService, FileUploadLocalService>();
 builder.Services.AddScoped<IEventRecordRepository, EventRecordRepository>();
 builder.Services.AddScoped<IEventRecordMapService, EventRecordMapService>();
